@@ -5,6 +5,9 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Team from "./pages/Team";
 import Company from "./pages/Company";
+import { AuthProvider } from "./context/AuthContext";
+import ProtectedRoute from "./pages/ProtectedRoute";
+import LoginPage from "./pages/Login";
 
 const router = createBrowserRouter([
   {
@@ -16,8 +19,12 @@ const router = createBrowserRouter([
     element: <About />,
   },
   {
-    path: "/contact",
-    element: <Contact />,
+    path: "/login",
+    element: <LoginPage />,
+  },
+  {
+    path: "/contact/*",
+    element: <ProtectedRoute path="/contact" element={<Contact />} />,
   },
   {
     path: "/about/team/:teamId", // Define a route parameter ":teamId"
@@ -32,7 +39,9 @@ const router = createBrowserRouter([
 export default function App() {
   return (
     <div className="bg-neutral-1000 ">
-      <RouterProvider router={router} />
+      <AuthProvider>
+        <RouterProvider router={router} />
+      </AuthProvider>
     </div>
   );
 }

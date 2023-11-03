@@ -1,6 +1,7 @@
 import MenuBar from "../components/menubar";
 
 function Contact() {
+  console.log("Contact Page");
   return (
     <>
       <MenuBar />
