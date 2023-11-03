@@ -20,11 +20,11 @@ const router = createBrowserRouter([
     element: <Contact />,
   },
   {
-    path: "/about/team",
+    path: "/about/team/:teamId", // Define a route parameter ":teamId"
     element: <Team />,
   },
   {
-    path: "/about/company",
+    path: "/about/company/:companyId", // Define a route parameter ":companyId"
     element: <Company />,
   },
 ]);
