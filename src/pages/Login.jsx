@@ -2,14 +2,12 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
 function LoginPage() {
-  const { isAuthenticated, login, setIsAuthenticated } = useAuth();
+  const { setIsAuthenticated } = useAuth();
 
   const navigate = useNavigate();
 
-  const handleLogin = async () => {
-    console.log("pre:", isAuthenticated);
-    const a = await setIsAuthenticated(true);
-    console.log("post", isAuthenticated);
+  const handleLogin = () => {
+    setIsAuthenticated(true);
     navigate("/contact");
   };
 
