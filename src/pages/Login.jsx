@@ -10,7 +10,7 @@ function LoginPage() {
     console.log("pre:", isAuthenticated);
     const a = await setIsAuthenticated(true);
     console.log("post", isAuthenticated);
-    navigate("/about");
+    navigate("/contact");
   };
 
   return (

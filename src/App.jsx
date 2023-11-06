@@ -22,7 +22,10 @@ const router = createBrowserRouter([
     path: "/login",
     element: <LoginPage />,
   },
-
+  // {
+  //   path: "/contact",
+  //   element: <Contact />,
+  // },
   {
     path: "/contact/*",
     element: <ProtectedRoute path="/contact" element={<Contact />} />,
