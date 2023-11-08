@@ -5,7 +5,7 @@ function Contact() {
   return (
     <>
       <MenuBar />
-      <div className="bg-white ">
+      <div className="bg-white  min-h-screen">
         <h2 className="text-4xl text-center p-20">This is Contact Page</h2>
       </div>
     </>

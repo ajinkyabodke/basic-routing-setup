@@ -6,7 +6,7 @@ function About() {
   return (
     <>
       <MenuBar />
-      <div className="bg-white ">
+      <div className="bg-white min-h-screen ">
         <div className="p-20">
           <div className="flex gap-5 justify-evenly text-3xl underline">
             <button onClick={() => navigate("/about/team/1")}>

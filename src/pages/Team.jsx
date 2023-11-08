@@ -6,7 +6,7 @@ function Team() {
   return (
     <>
       <MenuBar />
-      <div className="bg-white">
+      <div className="bg-white min-h-screen ">
         <h2 className="text-4xl text-center p-20">
           Team Page - Team ID: {teamId}
         </h2>
