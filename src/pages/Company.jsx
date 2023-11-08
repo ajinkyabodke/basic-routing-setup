@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import MenuBar from "../components/menubar";
+import MenuBar from "../components/MenuBar.jsx";
 
 function Company() {
   const { companyId } = useParams(); // Access the "companyId" route parameter

@@ -1,4 +1,4 @@
-import MenuBar from "../components/menubar";
+import MenuBar from "../components/MenuBar.jsx";
 
 function Contact() {
   console.log("Contact Page");

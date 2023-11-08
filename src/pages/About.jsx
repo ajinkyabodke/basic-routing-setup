@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import MenuBar from "../components/menubar";
+import MenuBar from "../components/MenuBar.jsx";
 
 function About() {
   const navigate = useNavigate();
