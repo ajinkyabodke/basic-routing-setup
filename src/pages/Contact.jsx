@@ -6,7 +6,7 @@ function Contact() {
     <>
       <MenuBar />
       <div className="bg-white  min-h-screen">
-        <h2 className="text-4xl text-center p-20">This is Contact Page</h2>
+        <h2 className="text-4xl text-center p-20">This is Contact Page(Only visible when user is authenticated,refresh to logout!)</h2>
       </div>
     </>
   );
