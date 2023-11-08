@@ -8,6 +8,7 @@ import Company from "./pages/Company";
 import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./pages/ProtectedRoute";
 import LoginPage from "./pages/Login";
+import Notfound from "./pages/Notfound";
 
 const router = createBrowserRouter([
   {
@@ -34,13 +35,17 @@ const router = createBrowserRouter([
     path: "/about/company/:companyId", // Define a route parameter ":companyId"
     element: <Company />,
   },
+  {
+    path: "/*",
+    element: <Notfound />,
+  },
 ]);
 
 export default function App() {
   return (
     <div className="bg-neutral-1000 ">
       <AuthProvider>
-        <RouterProvider router={router} />
+        <RouterProvider router={router} fallbackElement={<div>40444444</div>} />
       </AuthProvider>
     </div>
   );
