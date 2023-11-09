@@ -24,8 +24,12 @@ const router = createBrowserRouter([
     element: <LoginPage />,
   },
   {
-    path: "/contact/*",
-    element: <ProtectedRoute path="/contact" element={<Contact />} />,
+    path: "/contact",
+    element: (
+      <ProtectedRoute>
+        <Contact />
+      </ProtectedRoute>
+    ) ,
   },
   {
     path: "/about/team/:teamId", // Define a route parameter ":teamId"
