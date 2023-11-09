@@ -18,6 +18,12 @@ const router = createBrowserRouter([
   {
     path: "/about",
     element: <About />,
+    children: [
+      {
+        path: "company/:companyId",
+        element: <Company />,
+      },
+    ],
   },
   {
     path: "/login",
@@ -29,16 +35,16 @@ const router = createBrowserRouter([
       <ProtectedRoute>
         <Contact />
       </ProtectedRoute>
-    ) ,
+    ),
   },
   {
     path: "/about/team/:teamId", // Define a route parameter ":teamId"
     element: <Team />,
   },
-  {
-    path: "/about/company/:companyId", // Define a route parameter ":companyId"
-    element: <Company />,
-  },
+  // {
+  //   path: "/about/company/:companyId", // Define a route parameter ":companyId"
+  //   element: <Company />,
+  // },
   {
     path: "/*",
     element: <Notfound />,
